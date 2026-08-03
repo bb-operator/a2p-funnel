@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SMS Opt-In - Blackbook Properties</title>
+<meta name="description" content="Opt in to receive SMS communications from Blackbook Properties regarding real estate transactions, scheduling, and coordination.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --gold: #dcc67d; --gold-dark: #c9b05f; --gold-text: #b89b4e;
+    --ink: #1a1a1a; --bg: #eaeef0; --line: #d4d8da;
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Jost', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--ink); line-height: 1.6; }
+  a { color: var(--gold-text); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  header { background: #fff; padding: 18px 40px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #e2e6e8; position: sticky; top: 0; z-index: 100; }
+  header img { height: 34px; }
+  header .phone { font-size: 15px; font-weight: 500; color: var(--ink); }
+  header .phone:hover { text-decoration: none; color: var(--gold-text); }
+  .hero { position: relative; background: linear-gradient(135deg, #1a2b33 0%, #2c4048 100%); color: #fff; padding: 90px 20px 100px; text-align: center; overflow: hidden; }
+  .hero::after { content: ""; position: absolute; inset: 0; background: url('https://www.condoblackbook.com/_next/static/media/floorplan-1.19631faf.jpg') center/cover; opacity: 0.08; }
+  .hero-inner { position: relative; z-index: 2; max-width: 760px; margin: 0 auto; }
+  .hero .eyebrow { font-size: 13px; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); font-weight: 600; margin-bottom: 18px; }
+  .hero h1 { font-size: 46px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; line-height: 1.1; margin-bottom: 20px; }
+  .hero p { font-size: 18px; color: #d6dde0; max-width: 600px; margin: 0 auto 30px; }
+  .hero .cta { display: inline-block; background: var(--gold); color: var(--ink); padding: 15px 40px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; font-size: 14px; transition: background .15s; }
+  .hero .cta:hover { background: var(--gold-dark); text-decoration: none; }
+  .info-strip { background: #fff; padding: 44px 20px; display: flex; justify-content: center; gap: 60px; flex-wrap: wrap; border-bottom: 1px solid #e2e6e8; }
+  .info-item { max-width: 260px; text-align: center; }
+  .info-item h3 { font-size: 15px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; color: var(--ink); }
+  .info-item p { font-size: 14px; color: #666; }
+  .form-section { padding: 70px 20px; }
+  .card { background: #fff; max-width: 640px; width: 100%; margin: 0 auto; padding: 48px 44px; box-shadow: 0 2px 24px rgba(0,0,0,0.06); }
+  .card .eyebrow { font-size: 13px; letter-spacing: 2px; text-transform: uppercase; color: var(--gold-text); font-weight: 600; margin-bottom: 12px; }
+  .card h2 { font-size: 30px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 14px; line-height: 1.15; }
+  .card .intro { font-size: 16px; color: #444; margin-bottom: 30px; }
+  .field input, .field textarea { width: 100%; padding: 16px 18px; border: 1px solid var(--line); font-family: inherit; font-size: 16px; color: var(--ink); outline: none; transition: border-color .15s; }
+  .field input { border-bottom: none; }
+  .field:nth-of-type(3) input { border-bottom: 1px solid var(--line); }
+  .field input:focus, .field textarea:focus { border-color: var(--gold-text); position: relative; z-index: 2; }
+  .field textarea { margin-top: 22px; min-height: 100px; resize: vertical; border: 1px solid var(--line); }
+  .consent { display: flex; align-items: flex-start; gap: 12px; margin: 26px 0 8px; }
+  .consent input[type="checkbox"] { width: 22px; height: 22px; min-width: 22px; margin-top: 3px; accent-color: var(--gold-text); cursor: pointer; }
+  .consent label { font-size: 13.5px; color: #555; line-height: 1.55; }
+  .consent label b { color: var(--ink); }
+  .disclaimer { font-size: 12.5px; color: #777; margin: 18px 0 26px; line-height: 1.5; }
+  button.submit { background: var(--gold); color: var(--ink); border: none; padding: 16px 46px; font-family: inherit; font-size: 15px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; cursor: pointer; transition: background .15s; float: right; }
+  button.submit:hover { background: var(--gold-dark); }
+  .success { display: none; text-align: center; padding: 30px 0; }
+  .success h2 { font-size: 26px; text-transform: uppercase; margin-bottom: 12px; }
+  .success p { color: #555; }
+  .success .check { width: 64px; height: 64px; border-radius: 50%; background: var(--gold); display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-size: 32px; color: #fff; }
+  footer { background: #16232a; color: #b7c2c7; padding: 50px 40px 30px; font-size: 13px; }
+  .footer-grid { max-width: 900px; margin: 0 auto; display: flex; justify-content: space-between; gap: 40px; flex-wrap: wrap; padding-bottom: 30px; border-bottom: 1px solid #2a3a42; }
+  .footer-col { flex: 1; min-width: 220px; }
+  .footer-col h4 { font-size: 13px; text-transform: uppercase; letter-spacing: 1px; color: #fff; margin-bottom: 14px; }
+  .footer-col p { margin-bottom: 8px; line-height: 1.7; }
+  .footer-col a { color: var(--gold); }
+  .footer-legal { max-width: 900px; margin: 24px auto 0; text-align: center; font-size: 12px; color: #7d8b91; line-height: 1.7; }
+  .footer-legal a { color: var(--gold); margin: 0 6px; }
+  @media (max-width: 640px) {
+    header { padding: 16px 20px; }
+    .hero { padding: 60px 20px 70px; }
+    .hero h1 { font-size: 32px; }
+    .card { padding: 34px 24px; }
+    .card h2 { font-size: 24px; }
+    button.submit { width: 100%; float: none; }
+    .info-strip { gap: 30px; }
+  }
+</style>
+</head>
+<body>
+  <header>
+    <img src="https://www.condoblackbook.com/images/logo.svg" alt="Blackbook Properties">
+    <a class="phone" href="tel:+13056977667">(305) 697-7667</a>
+  </header>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="eyebrow">Vendor &amp; Partner Communications</div>
+      <h1>Stay Connected<br>With Our Team</h1>
+      <p>Opt in to receive SMS updates from Blackbook Properties about real estate transactions, closing coordination, scheduling, and important business updates, right when you need them.</p>
+      <a href="#optin" class="cta">Opt In Now</a>
+    </div>
+  </section>
+
+  <section class="info-strip">
+    <div class="info-item"><h3>Timely Updates</h3><p>Get real-time coordination on transactions, closings, and document signing.</p></div>
+    <div class="info-item"><h3>Direct Line</h3><p>Reach our team quickly for scheduling and business coordination.</p></div>
+    <div class="info-item"><h3>Fully Optional</h3><p>SMS consent is optional and you can opt out at any time by replying STOP.</p></div>
+  </section>
+
+  <section class="form-section" id="optin">
+    <div class="card">
+      <div id="formView">
+        <div class="eyebrow">SMS Opt-In</div>
+        <h2>Request SMS Updates</h2>
+        <p class="intro">Fill out the form below to opt in to SMS communications from Blackbook Properties. All fields are required except where noted.</p>
+
+        <div class="field"><input type="text" id="name" placeholder="Your Name" required></div>
+        <div class="field"><input type="tel" id="phone" placeholder="Phone Number" required></div>
+        <div class="field"><input type="email" id="email" placeholder="Email" required></div>
+        <div class="field"><textarea id="company" placeholder="Company / Role (optional)"></textarea></div>
+
+        <div class="consent">
+          <input type="checkbox" id="smsConsent">
+          <label for="smsConsent"><b>It's OK to text me.</b> By checking this box, I consent to receive conversational SMS messages from Blackbook Properties (Condo Black Book LLC) regarding real estate transactions, scheduling, and coordination. Reply "STOP" at any time to opt-out. Reply "HELP" for support. Message &amp; data rates may apply. Message frequency may vary. For more information, please refer to our <a href="/privacy" target="_blank">Privacy Policy</a> and <a href="/terms" target="_blank">SMS Terms &amp; Conditions</a>.</label>
+        </div>
+
+        <p class="disclaimer">Consent to receive SMS is optional and not required to work with Blackbook Properties. See our <a href="/terms" target="_blank">Terms of Service</a> and <a href="/privacy" target="_blank">Privacy Policy</a>.</p>
+
+        <button class="submit" onclick="submitForm()">Submit</button>
+        <div style="clear:both"></div>
+      </div>
+
+      <div class="success" id="successView">
+        <div class="check">&check;</div>
+        <h2>Thank You</h2>
+        <p>Your information has been received. If you opted in to SMS, you'll receive a confirmation message shortly. Reply STOP at any time to unsubscribe.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>Blackbook Properties</h4>
+        <p>Condo Black Book, LLC<br>1900 N Bayshore Dr #1A<br>Miami, FL 33132</p>
+        <p><a href="tel:+13056977667">(305) 697-7667</a></p>
+      </div>
+      <div class="footer-col">
+        <h4>About This Page</h4>
+        <p>This page allows vendors, partners, and clients of Blackbook Properties to opt in to SMS communications. We use SMS to coordinate real estate transactions, scheduling, and business updates. We never sell or share your phone number.</p>
+      </div>
+      <div class="footer-col">
+        <h4>SMS Program</h4>
+        <p>Message &amp; data rates may apply. Message frequency may vary. Reply STOP to opt out, HELP for help.</p>
+        <p><a href="/privacy">Privacy Policy</a> &nbsp;&middot;&nbsp; <a href="/terms">SMS Terms</a></p>
+      </div>
+    </div>
+    <div class="footer-legal">
+      Blackbook Properties fully supports the principles of the Fair Housing Act and the Equal Opportunity Act.<br>
+      Copyright 2007-2026 (C) Condo Black Book, LLC. All Rights Reserved.<br>
+      <a href="/terms">Terms of Use</a> &middot; <a href="/privacy">Privacy Policy</a> &middot; <a href="https://www.condoblackbook.com" target="_blank">condoblackbook.com</a>
+    </div>
+  </footer>
+
+<script>
+  function submitForm() {
+    var name = document.getElementById('name').value.trim();
+    var phone = document.getElementById('phone').value.trim();
+    var email = document.getElementById('email').value.trim();
+    if (!name || !phone || !email) { alert('Please fill in your name, phone, and email.'); return; }
+    var payload = {
+      name: name, phone: phone, email: email,
+      company: document.getElementById('company').value.trim(),
+      sms_consent: document.getElementById('smsConsent').checked,
+      consent_timestamp: new Date().toISOString(),
+      source: 'messages.blackbookproperties.com'
+    };
+    // OPCIONAL: descomenta y pon tu webhook de n8n para guardar el opt-in en Airtable
+    // fetch('https://engine.marpicorp.com/webhook/vendor-sms-optin', {
+    //   method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify(payload)
+    // });
+    console.log('Opt-in submitted:', payload);
+    document.getElementById('formView').style.display = 'none';
+    document.getElementById('successView').style.display = 'block';
+  }
+</script>
+</body>
+</html>

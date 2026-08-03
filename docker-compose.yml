@@ -1,0 +1,18 @@
+services:
+  bbp-messages:
+    image: nginx:alpine
+    container_name: bbp-messages
+    restart: unless-stopped
+    ports:
+      - "80"
+    volumes:
+      - ./index.html:/usr/share/nginx/html/index.html:ro
+      - ./terms.html:/usr/share/nginx/html/terms.html:ro
+      - ./privacy.html:/usr/share/nginx/html/privacy.html:ro
+      - ./default.conf:/etc/nginx/conf.d/default.conf:ro
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.bbp-messages.rule=Host(`messages.blackbookproperties.com`)
+      - traefik.http.routers.bbp-messages.entrypoints=websecure
+      - traefik.http.routers.bbp-messages.tls.certresolver=letsencrypt
+      - traefik.http.services.bbp-messages.loadbalancer.server.port=80
