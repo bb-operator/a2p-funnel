@@ -166,11 +166,9 @@
       consent_timestamp: new Date().toISOString(),
       source: 'messages.blackbookproperties.com'
     };
-    // OPCIONAL: descomenta y pon tu webhook de n8n para guardar el opt-in en Airtable
-    // fetch('https://engine.marpicorp.com/webhook/vendor-sms-optin', {
-    //   method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify(payload)
-    // });
-    console.log('Opt-in submitted:', payload);
+    fetch('https://engine.blackbookproperties.com/webhook/35b7f32e-2be3-4a01-bbe0-4715290a3ee0', {
+      method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify(payload)
+    }).catch(function(err) { console.error('Webhook error:', err); });
     document.getElementById('formView').style.display = 'none';
     document.getElementById('successView').style.display = 'block';
   }
