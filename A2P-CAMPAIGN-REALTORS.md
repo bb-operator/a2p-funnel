@@ -1,70 +1,97 @@
 # A2P 10DLC — Campaign #2: Property Alerts for Real Estate Professionals
 
-Copy-paste answers for Twilio Console → Messaging → Regulatory Compliance → A2P 10DLC → **Create new campaign** (same Brand: Condo Black Book LLC, APPROVED / Standard).
+Mirrors the structure of the approved campaign CM60b4642bcd58a9af94b4c93d4432849a (LOW_VOLUME, Jun 4 2026). Same Brand. New Messaging Service. New number.
 
-Before registering: deploy `/realtors` and make sure https://messages.blackbookproperties.com/realtors, /terms and /privacy load publicly. Create a NEW Messaging Service first (e.g. "BBP Realtor Property Alerts") and put the new 786 number in it; the campaign is attached to that service.
+Prerequisites (do first):
+1. Messaging → Services → Create: **BBP Realtor Property Alerts**. Attach the new 786 number to it.
+2. Confirm https://messages.blackbookproperties.com/realtors loads and shows the consent checkbox.
+3. Screenshot of /realtors with the checkbox visible → upload to Google Drive (link with "anyone can view") → paste where it says [DRIVE LINK].
 
 ---
 
-## Campaign use case
-**Marketing**
+## Campaign type
+A2P 10DLC Campaign · SMS · United States
 
-(Not "Mixed": this program only sends promotional/alert content. Keep the existing Low Volume Mixed campaign for Ana and client coordination.)
+## Assigned A2P Brand
+CONDO BLACK BOOK, LLC — BN552e28eafaedfc02e039c7a7ae1e2fd0 (Approved)
+
+## Assigned messaging service
+BBP Realtor Property Alerts (the new one, NOT Low Volume Mixed)
+
+## Use case
+**Marketing**
+(The approved campaign is LOW_VOLUME / mixed. Property alerts are promotional by nature, so Marketing is the honest fit. Picking Low Volume Mixed again and sending listing blasts is what gets campaigns suspended.)
+
+---
 
 ## Campaign description
-Blackbook Properties (Condo Black Book LLC), a licensed Miami real estate brokerage, sends recurring property alert text messages to licensed real estate agents, brokers and MLS members who opt in on our website at https://messages.blackbookproperties.com/realtors. Messages include new listings and inventory, price changes, pre-construction releases, off-market opportunities and Miami market data that agents use to serve their buyers. Recipients are real estate professionals who subscribe voluntarily; consent is not a condition of purchase or of doing business with us. Every message identifies Blackbook Properties and includes opt-out instructions. Frequency is up to 8 messages per month. Recipients can reply STOP to cancel at any time and HELP for assistance.
+This campaign sends recurring property alert SMS messages to licensed real estate agents, brokers and MLS members on behalf of Blackbook Properties (Condo Black Book LLC), a licensed Miami real estate brokerage. Messages include new listings and inventory, price changes, pre-construction releases, off-market opportunities and Miami market data that agents use to serve their buyers. All recipients are real estate professionals who opt in voluntarily through the dedicated subscription form at https://messages.blackbookproperties.com/realtors, operated by Blackbook Properties, before any messages are sent. Consent is not a condition of purchase or of doing business with Blackbook Properties. Message frequency is up to 8 messages per month.
 
-## Message flow / how end users opt in
-End users opt in on the web form at https://messages.blackbookproperties.com/realtors. They enter their name, mobile phone number and email, and must actively check an unchecked consent box that reads: "Yes, text me property alerts. By checking this box, I agree to receive recurring automated marketing text messages from Blackbook Properties (Condo Black Book LLC) at the mobile number provided, including new listings, price changes, pre-construction releases and Miami market data. Consent is not a condition of any purchase or of doing business with Blackbook Properties. Message frequency: up to 8 messages per month. Message & data rates may apply. Reply STOP to cancel at any time. Reply HELP for help." Links to the Privacy Policy (https://messages.blackbookproperties.com/privacy) and SMS Terms (https://messages.blackbookproperties.com/terms) are shown next to the checkbox. The form cannot be submitted without the box checked. After submitting, the user receives a confirmation text with the program name, frequency, STOP/HELP instructions and the message-and-data-rates disclosure. Consent records (timestamp, consent text, source URL) are stored. No phone numbers are purchased, rented or shared.
+## Messages contain phone numbers
+No
 
-## Opt-in keywords
+## Messages contain embedded links
+Yes
+(Links only to condoblackbook.com listing pages and market reports. No public URL shorteners. If you prefer the fastest approval, answer No and remove [Link] from the sample messages; recipients then reply YES to get the link.)
+
+## Messages contain content related to direct lending or other loan arrangement
+No
+
+## Messages contain age-gated content
+No
+
+## Campaign's terms and conditions
+https://www.condoblackbook.com/terms-of-use
+
+## Campaign's privacy policy
+https://www.condoblackbook.com/privacy-policy
+(Same URLs as the approved campaign, so the brand website matches. The program-specific SMS terms also live at https://messages.blackbookproperties.com/terms and /privacy, referenced in the message flow below.)
+
+---
+
+## Sample message #1
+Blackbook Properties Property Alerts: New listing at [Building], Unit [Unit], [Beds]/[Baths], [Price]. Details: [Link]. Msg & data rates may apply. Reply STOP to unsubscribe.
+
+## Sample message #2
+Blackbook Properties: Price change at [Building] Unit [Unit], now [Price] (was [Old Price]). See it here: [Link]. Reply STOP to unsubscribe.
+
+## Sample message #3
+Blackbook Properties: Pre-construction release, [Project] in [Neighborhood], residences from [Price]. Floor plans and pricing: [Link]. Reply STOP to unsubscribe.
+
+## Sample message #4
+Blackbook Properties: Off-market opportunity in [Neighborhood], [Beds]/[Baths], asking [Price]. Reply YES for details. Reply STOP to unsubscribe.
+
+## Sample message #5
+Blackbook Properties Miami market update: [Month] closed sales [Number], median price [Price] in [Neighborhood]. Full report: [Link]. Reply STOP to unsubscribe.
+
+---
+
+## End user consent (message flow) — How do end-users opt in to receive messages?
+End users opt in to receive SMS property alerts from Blackbook Properties (Condo Black Book LLC) by submitting the dedicated subscription form at https://messages.blackbookproperties.com/realtors, the official SMS opt-in site operated by Blackbook Properties. The form is intended for licensed real estate agents, brokers and MLS members. Users enter their name, mobile phone number and email and must actively check an unchecked SMS consent checkbox; the form cannot be submitted unless the box is checked.
+
+The checkbox displays the following language: "Yes, text me property alerts. By checking this box, I agree to receive recurring automated marketing text messages from Blackbook Properties (Condo Black Book LLC) at the mobile number provided, including new listings, price changes, pre-construction releases and Miami market data. Consent is not a condition of any purchase or of doing business with Blackbook Properties. Message frequency: up to 8 messages per month. Message & data rates may apply. Reply STOP to cancel at any time. Reply HELP for help. See our Privacy Policy and SMS Terms & Conditions." Links to the Privacy Policy (https://messages.blackbookproperties.com/privacy) and SMS Terms (https://messages.blackbookproperties.com/terms) appear next to the checkbox. The checkbox is unchecked by default. After submitting, the user receives a confirmation message with the program name, frequency, STOP/HELP instructions and the message-and-data-rates disclosure. Consent records (timestamp, consent text and source URL) are stored. Phone numbers are never purchased, rented or shared. Screenshot of opt-in form: [DRIVE LINK]. Privacy Policy: https://www.condoblackbook.com/privacy-policy. Terms: https://www.condoblackbook.com/terms-of-use.
+
+## Opt in message
+Blackbook Properties: You're subscribed to Property Alerts for real estate professionals. Up to 8 msgs/month. Msg & data rates may apply. Reply STOP to unsubscribe, HELP for help.
+
+## Opt in keywords
 (leave empty — web form only)
 
-## Opt-in confirmation message
-Blackbook Properties: You're subscribed to Property Alerts for real estate professionals. Up to 8 msgs/month. Msg & data rates may apply. Reply STOP to cancel, HELP for help.
+## Opt-out message
+You have successfully been unsubscribed from Blackbook Properties Property Alerts. You will not receive any more messages from this number. Reply START to resubscribe.
 
 ## Opt-out keywords
-STOP, STOPALL, UNSUBSCRIBE, CANCEL, END, QUIT
+OPTOUT, CANCEL, END, QUIT, UNSUBSCRIBE, REVOKE, STOP, STOPALL
 
-## Opt-out message
-Blackbook Properties: You have been unsubscribed from Property Alerts and will receive no further messages. Reply START to re-subscribe.
+## Help message
+Blackbook Properties Property Alerts. For help email operations@blackbookproperties.com. Reply STOP to unsubscribe. Msg & data rates may apply.
 
 ## Help keywords
 HELP, INFO
 
-## Help message
-Blackbook Properties Property Alerts: for help email operations@blackbookproperties.com or call (305) 697-7667. Reply STOP to cancel. Msg & data rates may apply.
-
-## Sample messages (20–200 chars, brand named, opt-out included)
-1. Blackbook Properties: New listing at [Building], [Unit] — [Beds]/[Baths], [Price]. Details: [Link]. Reply STOP to opt out.
-2. Blackbook Properties: Price change at [Building] [Unit], now [Price] (was [OldPrice]). Reply STOP to opt out.
-3. Blackbook Properties: Pre-construction release — [Project], [Neighborhood], from [Price]. Floor plans: [Link]. Reply STOP to opt out.
-4. Blackbook Properties: Off-market opportunity in [Neighborhood], [Beds]/[Baths], [Price]. Reply YES for details or STOP to opt out.
-5. Blackbook Properties: Miami market update — [Month] closed sales [Number], median [Price] in [Neighborhood]. Report: [Link]. Reply STOP to opt out.
-
-## Message contents
-- Embedded links: **Yes** (links to condoblackbook.com listing pages and market reports; no public URL shorteners)
-- Embedded phone numbers: **Yes** ((305) 697-7667 in HELP message)
-- Age-gated content: No
-- Direct lending / loan arrangement: No
-- Affiliate marketing: No
-
-## Privacy policy URL
-https://messages.blackbookproperties.com/privacy
-
-## Terms and conditions URL
-https://messages.blackbookproperties.com/terms
-
-## Opt-in proof (screenshot/URL)
-https://messages.blackbookproperties.com/realtors
-(Take a screenshot of the form with the consent box visible and attach it too.)
-
-## Expected volume
-Low Volume Standard is fine to start (under 2,000 segments/day). Upgrade to Standard if the subscriber list grows past ~1,500.
-
 ---
 
 ### After approval
-1. Attach the new 786 number to the "BBP Realtor Property Alerts" Messaging Service (sender pool).
-2. Send from that Messaging Service (not from the raw number) so the campaign is applied.
-3. Keep the two programs separate: never send property alerts from Ana's or CBB's numbers.
+1. Keep the 786 number inside "BBP Realtor Property Alerts" and send through that Messaging Service.
+2. Never send property alerts from Ana's number or the CBB number; never send Ana's conversational messages from this one.
+3. Expect a Low Volume Standard trust tier at first (under 2,000 segments/day). Enough for the list size you'll have.
