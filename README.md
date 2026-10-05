@@ -8,7 +8,9 @@ SMS opt-in landing page for Blackbook Properties' A2P 10DLC registration.
 
 | File | What it is |
 |---|---|
-| `index.html` | Main SMS opt-in page (form with consent checkbox) |
+| `index.html` | Program A: client & partner SMS opt-in (conversational / transactional) |
+| `realtors.html` | Program B: property alerts opt-in for real estate professionals (`/realtors`, alias `/agents`) — marketing use case, A2P campaign #2 |
+| `A2P-CAMPAIGN-REALTORS.md` | Copy-paste answers for registering campaign #2 in Twilio Trust Hub |
 | `terms.html` | Terms and conditions (`/terms`) |
 | `privacy.html` | Privacy policy (`/privacy` and `/privacy-policy`) |
 | `default.conf` | nginx configuration (clean routes without `.html`) |
