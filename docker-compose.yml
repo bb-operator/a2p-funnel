@@ -3,12 +3,13 @@ services:
     image: nginx:alpine
     container_name: bbp-messages
     restart: unless-stopped
-    ports:
+    expose:
       - "80"
     volumes:
       - ./index.html:/usr/share/nginx/html/index.html:ro
       - ./terms.html:/usr/share/nginx/html/terms.html:ro
       - ./privacy.html:/usr/share/nginx/html/privacy.html:ro
+      - ./realtors.html:/usr/share/nginx/html/realtors.html:ro
       - ./default.conf:/etc/nginx/conf.d/default.conf:ro
     labels:
       - traefik.enable=true
